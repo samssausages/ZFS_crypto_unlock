@@ -26,6 +26,21 @@ zfs create -o encryption=on -o keylocation=file:///zfs_keyfiles/zfs_keyfilename 
 zfs load-key poolname/datasetname
 zfs mount poolname/datasetname
 ```
+## How to use the script on boot  (Looking for someone to add general linux instructions)
+This depends heavily on your system.
+### Unraid
+1. Install User Scripts Plugin
+2. Create New Script and copy/paste ZFS_crypto_unlock.sh
+3. Set to "At Startup of Array"
+
+## How to auto mount a usb on boot
+This also depends on your system.
+### Unraid
+1. Install Unassigned Devices Plugin
+2. Expand settings for specific USB
+3. Configure to automount in the Settings menu
+
+## Maintainance Tasks
 ### Modify Dataset Keyfile Storage Location
 If you move the keyfile, you need to update the dataset with the new location.
 1. Unload Key
@@ -44,17 +59,3 @@ zfs load-key poolname/datasetname
 ```
 zfs get all poolname/datasetname | grep keylocation
 ```
-
-## How to use the script on boot  (Looking for someone to add general linux instructions)
-This depends heavily on your system.
-### Unraid
-1. Install User Scripts Plugin
-2. Create New Script and copy/paste ZFS_crypto_unlock.sh
-3. Set to "At Startup of Array"
-
-## How to auto mount a usb on boot
-This also depends on your system.
-### Unraid
-1. Install Unassigned Devices Plugin
-2. Expand settings for specific USB
-3. Configure to automount in the Settings menu
