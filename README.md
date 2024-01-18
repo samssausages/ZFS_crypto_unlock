@@ -27,8 +27,41 @@ zfs create -o encryption=on -o keylocation=file:///zfs_keyfiles/zfs_keyfilename 
 zfs load-key poolname/datasetname
 zfs mount poolname/datasetname
 ```
-## How to use the script on boot  (Looking for someone to add general linux instructions)
+## How to use the script on boot
 This depends heavily on your system.
+
+### Debian
+NOTES:  Make sure to give a unique name to script.service and script.sh
+
+1. Save Your Script in a Suitable Location like /opt
+2. make sure the script is excecutable:
+```
+chmod +x /opt/script.sh
+```
+3. Reference Your Script in the Service File:  (name appropriately & match script location)
+```
+nano /etc/systemd/system/script.service
+```
+add this to the service file:
+```
+[Unit]
+Description=My custom startup script
+
+[Service]
+ExecStart=/opt/script.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+4. Check if added as service:
+```
+systemctl status script.service
+``` 
+6. Reboot.  Script should now run on boot.  You can can confirm by running another:
+```
+systemctl status script.service
+```
+
 ### Unraid
 1. Install User Scripts Plugin
 2. Create New Script and copy/paste ZFS_crypto_unlock.sh
