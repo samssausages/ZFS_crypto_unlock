@@ -57,7 +57,7 @@ WantedBy=multi-user.target
 ```
 systemctl status script.service
 ``` 
-6. Reboot.  Script should now run on boot.  You can can confirm by running another:
+6. Reboot.  Script should now run on boot.  You can confirm by running another:
 ```
 systemctl status script.service
 ```
