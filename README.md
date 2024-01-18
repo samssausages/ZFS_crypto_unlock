@@ -6,7 +6,7 @@ Some ideas:
 A USB extension that is hidden
 A USB extension that goes to a locked cabinet
 
-You can also serve the keyfiles over networked methods, if your motherboard and system allow for that.  If you don't have to unlock the datasets until after os boot, then you can store the files pretty mich anywhere, auch as networked.  Personally, I prefer the physical device.
+You can also serve the keyfiles over networked methods, if your motherboard and system allow for that.  If you don't have to unlock the datasets until after os boot, then you can store the files pretty much anywhere, auch as networked.  Personally, I prefer the physical device.
 
 ***Whatever you decide, make sure you have appropriate permissions set for these keyfiles.  They should be protected and treated just like SSH keys.  AND keep a backup!***
 
