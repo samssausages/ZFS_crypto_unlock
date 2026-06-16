@@ -94,3 +94,6 @@ zfs load-key poolname/datasetname
 zfs get all poolname/datasetname | grep keylocation
 
 ```
+
+# How was AI used in this script?
+AI Was not used to create this script
